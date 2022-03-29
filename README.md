@@ -52,7 +52,11 @@ super(Child,c).myMethod() #用子类对象调用父类已被覆盖的方法
 # 9私有方法 私有变量
 __ 只能在类中使用
 
-
+# 10 arg kwarg 
+arg是输入的参数
+kwarg是关键词参数
+*arg 是元组
+**kwarg 是dict{}
 
 
 
