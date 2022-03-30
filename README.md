@@ -15,15 +15,15 @@ random.random() #0-1
 random.randint(a,b)#随机a-b之间整数
 random.uniform(a,b)#随机a-b浮点数
 
-#3 pychecker和pylint
+* 3pychecker和pylint
 pychecker是对代码的bug进行检查的
 pylint是对代码的标准进行检查
 
-*4 <.*> <.?>
+* 4<.*> <.?>
 贪婪匹配和满足匹配
 
-*5 re.match 和search()
-'''
+* 5re.match 和search()
+```
 print(re.match('zhangda','zhangdabusy'))
 
 print(re.search('angda','zhangdabusy'))
@@ -32,39 +32,41 @@ print('zzz'.replace('z','d'))
 <_sre.SRE_Match object; span=(0, 7), match='zhangda'>
 <_sre.SRE_Match object; span=(2, 7), match='angda'>
 ddd
-'''
+```
 
-*6 [::]
+* 6[::]
+```
 c=b[::-1]
 print(c)
 d=b[::-3]
 print(d)
 edcba
 eb
+```
 
-*7python 中的迭代器和生成器
+* 7python 中的迭代器和生成器
 一个类用到迭代器需要iter()和next()方法
 StopIteration 是迭代器结束的标志
 迭代器是一种对象；用iter()定义，用next调动下一个迭代器；
 生成器其实是一个包括了yeild返回的函数，保存的是上一个程序返回时候的结果
 
 
-*8继承 多态 方法重写
+* 8继承 多态 方法重写
 子类从左向右继承父类
 super(Child,c).myMethod() #用子类对象调用父类已被覆盖的方法
 
-*9私有方法 私有变量
+* 9私有方法 私有变量
 __ 只能在类中使用
 
-*10 arg kwarg 
+* 10arg kwarg 
 arg是输入的参数
 kwarg是关键词参数
 *arg 是元组
 **kwarg 是dict{}
 
-*11 os.path time
+* 11os.path time
 
-'''
+```
 import os
 import time
 
@@ -77,10 +79,10 @@ print(os.path.abspath(__file__))#\home\dir\1.txt
 print(os.path.basename(__file__))#1.txt
 print(time.gmtime( os.path.getmtime(__file__)) ) #time.struct_time(tm_year=2022, tm_mon=3, tm_mday=29, tm_hour=13, tm_min=8, tm_sec=23, tm_wday=1, tm_yday=88, tm_isdst=0)
 print(os.path.getsize(__file__)) #byte
-'''
+```
 
-# 12 sys.stdin sys.stdout
-'''
+* 12sys.stdin sys.stdout
+```
 sys.stdin sys.stdout
 import sys
 st_input=sys.stdin.readline()
@@ -88,9 +90,9 @@ print(sys.stdout.write(st_input))
 st_output=open("1.txt",'w')
 sys.stdout=st_output
 print("hello1")
-'''
+```
 
-*13 sys.path sys.modules
+* 13sys.path sys.modules
 +sys.modules
 存放已经缓存的模块
 值是dict
@@ -100,8 +102,8 @@ print("hello1")
 +if __name__= __main__
 可以看成python的程序入口，如果直接执行该.py文件，那么执行后面的代码，如果作为模块导入，则不执行后面的代码
 
-*14  parser.parse_known_args()
-'''
+* 14parser.parse_known_args()
+```
 import argparse
 def basic_options():
     parser = argparse.ArgumentParser()
@@ -122,5 +124,5 @@ if __name__ == '__main__':
     opt = parser.parse_args()
     print(opt)
     print('{data_mode}_{mode}_{lr}'.format(**vars(opt)))
-'''
+```
 [简书](https://www.cnblogs.com/wanghui-garcia/p/11267160.html)
