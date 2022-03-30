@@ -27,8 +27,10 @@ print(re.match('zhangda','zhangdabusy'))
 
 print(re.search('angda','zhangdabusy'))
 
+print('zzz'.replace('z','d'))
 <_sre.SRE_Match object; span=(0, 7), match='zhangda'>
 <_sre.SRE_Match object; span=(2, 7), match='angda'>
+ddd
 
 # 6 [::]
 c=b[::-1]
@@ -58,11 +60,60 @@ kwarg是关键词参数
 *arg 是元组
 **kwarg 是dict{}
 
+# 11 os.path time
+import os
+import time
 
+print(os.path.getatime(__file__))#access_time
+print(os.path.getctime(__file__))#create_time
+print(os.path.getmtime(__file__))#correct_time
+#/home/dir/1.txt
+print(os.path.dirname(__file__))#/home/dir
+print(os.path.abspath(__file__))#\home\dir\1.txt
+print(os.path.basename(__file__))#1.txt
+print(time.gmtime( os.path.getmtime(__file__)) ) #time.struct_time(tm_year=2022, tm_mon=3, tm_mday=29, tm_hour=13, tm_min=8, tm_sec=23, tm_wday=1, tm_yday=88, tm_isdst=0)
+print(os.path.getsize(__file__)) #byte
 
+# 12 sys.stdin sys.stdout
+#sys.stdin sys.stdout
+import sys
+st_input=sys.stdin.readline()
+print(sys.stdout.write(st_input))
+st_output=open("1.txt",'w')
+sys.stdout=st_output
+print("hello1")
 
+# 13 sys.path sys.modules
+1、sys.modules
+存放已经缓存的模块
+值是dict
+2、sys.path
+搜索路径
+值是list
+3、if __name__= __main__
+可以看成python的程序入口，如果直接执行该.py文件，那么执行后面的代码，如果作为模块导入，则不执行后面的代码
 
+# 14  parser.parse_known_args()
+"
+import argparse
+def basic_options():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--data_mode', type=str, default= 'unaligned', help='chooses how datasets are loaded')
+    parser.add_argument('--mode', type=str, default='test', help='test mode')
+    return parser
 
+def data_options(parser):
+    parser.add_argument('--lr', type=str, default='0.0001', help='learning rate')
+    return parser
 
-
-
+if __name__ == '__main__':
+    parser = basic_options()
+    opt, unparsed = parser.parse_known_args()
+    print(opt)
+    print(unparsed)
+    parser = data_options(parser)
+    opt = parser.parse_args()
+    print(opt)
+    print('{data_mode}_{mode}_{lr}'.format(**vars(opt)))
+"
+https://www.cnblogs.com/wanghui-garcia/p/11267160.html
