@@ -134,3 +134,11 @@ if __name__ == '__main__':
 [简书](https://www.jianshu.com/p/cb97d290c17f)
 [python内置函数](https://segmentfault.com/a/1190000000494023)
 
+* 16@property
+@property
+def age():
+@age.setter()
+def age()
+property的单独使用
+或者age=property(get_age,set_age())
+
