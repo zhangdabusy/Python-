@@ -128,3 +128,9 @@ if __name__ == '__main__':
     print('{data_mode}_{mode}_{lr}'.format(**vars(opt)))
 ```
 [简书](https://www.cnblogs.com/wanghui-garcia/p/11267160.html)
+
+* 15package、module、__init__、__name__ 、__all__、__main__、 
+
+[简书](https://www.jianshu.com/p/cb97d290c17f)
+[python内置函数](https://segmentfault.com/a/1190000000494023)
+
