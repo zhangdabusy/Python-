@@ -158,5 +158,13 @@ def other_funB(name,arc):
 funB("http://c.biancheng.net")
 other_funB("Python教程：","http://c.biancheng.net/python")
 ```
+* 18 itertools
 
+l = itertools.groupby("aaadbbcc")
+for key,group in l:
+    print(key,list(group))
+<!-- a ['a', 'a', 'a']
+d ['d']
+b ['b', 'b']
+c ['c', 'c'] -->
 
