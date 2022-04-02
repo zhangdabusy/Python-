@@ -168,3 +168,6 @@ d ['d']
 b ['b', 'b']
 c ['c', 'c']
 ```
+
+* 19__call__()
+[call函数](https://blog.csdn.net/qq_35462323/article/details/89307534)
