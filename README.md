@@ -135,12 +135,9 @@ if __name__ == '__main__':
 [python内置函数](https://segmentfault.com/a/1190000000494023)
 
 * 16@property
-@property
-def age():
-@age.setter()
-def age()
-property的单独使用
-或者age=property(get_age,set_age())
+    @property
+    [property主要修饰是方法](https://zhuanlan.zhihu.com/p/64487092)
+    加了property可以直接引用属性那样引用方法，每加的话要加入（）
 
 * 17 @装饰器
 ```
