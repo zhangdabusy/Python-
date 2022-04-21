@@ -169,3 +169,23 @@ c ['c', 'c']
 
 * 19__call__()
 [call函数](https://blog.csdn.net/qq_35462323/article/details/89307534)
+
+* 20 bisect insort
+```
+import bisect
+l=[2,3,5]
+
+k_l=bisect.bisect_left(l,3)
+k_r=bisect.bisect_right(l,3)
+
+print(k_l,k_r)
+
+bisect.insort_left(l,2)
+bisect.insort_right(l,2)
+print(l)
+#1 2
+#[2, 2, 2, 3, 5]
+
+```
+
+
