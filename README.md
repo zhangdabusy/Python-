@@ -137,8 +137,9 @@ if __name__ == '__main__':
 * 16@property
     @property
     [property主要修饰是方法](https://zhuanlan.zhihu.com/p/64487092)
-    加了property可以直接引用属性那样引用方法，每加的话要加入（）
-
+    加了property可以直接引用属性那样引用方法，每加的话要加入（）@property等于get_age() @age.setter() 
+    [property中get set del应用](https://blog.csdn.net/qq_41359051/article/details/82939655)
+    
 * 17 @装饰器
 ```
 def funA(fn):
